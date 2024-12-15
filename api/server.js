@@ -8,8 +8,8 @@ import { createServer } from "http";
 // routes
 import authRoutes from "./routes/authRoutes.js";
 import userRoutes from "./routes/userRoutes.js";
-import matchRoutes from "./routes/matchRoutes.js";
 import messageRoutes from "./routes/messageRoutes.js";
+import matchRoutes from "./routes/matchRoutes.js";
 
 import { connectDB } from "./config/db.js";
 import { initializeSocket } from "./socket/socket.server.js";
@@ -28,7 +28,7 @@ app.use(express.json());
 app.use(cookieParser());
 app.use(
 	cors({
-		origin: process.env.CLIENT_URL,
+		origin: "http://localhost:5173",
 		credentials: true,
 	})
 );
